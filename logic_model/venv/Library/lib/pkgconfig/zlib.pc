@@ -1,0 +1,13 @@
+prefix=D:/Vedant Visionaries/venv/Library
+exec_prefix=D:/Vedant Visionaries/venv/Library
+libdir=D:/Vedant Visionaries/venv/Library/lib
+sharedlibdir=D:/Vedant Visionaries/venv/Library/lib
+includedir=D:/Vedant Visionaries/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
