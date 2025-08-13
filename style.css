@@ -39,9 +39,11 @@ body {
 /* Header */
 header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    gap: 0.5rem;
 }
 
 .logo {
@@ -69,33 +71,11 @@ header {
     font-weight: 600;
 }
 
-/* Contact strip */
-.contact-strip {
-    position:absolute;
-    
-    right: 10px;
-    background: #f5f5f5;
-    padding: 0.5rem;
-    border-radius: 8px 0 0 8px; /* rounded left side */
-    z-index: 1000;
-    font-weight: 600;
-}
-
-
-
-.contact-strip a {
-    background: var(--primary);
-    color: #fff;
-    padding: 0.3rem 0.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
 /* Auth buttons */
 .auth-buttons {
-    text-align: center;
-    margin: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .auth-buttons .btn {
@@ -104,7 +84,6 @@ header {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    margin: 0 0.25rem;
     transition: background 0.3s ease;
 }
 
@@ -114,7 +93,6 @@ header {
 }
 
 .auth-buttons .register {
-    background: var(--primary);
     background: linear-gradient(90deg, rgba(21, 128, 61, 0.95), rgba(9, 96, 54, 0.95));
     color: #fff;
 }
@@ -129,15 +107,17 @@ nav {
     color: #fff;
 }
 
-nav .container {
+.nav-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
@@ -156,6 +136,7 @@ nav a:hover {
 .nav-tools {
     margin-left: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.6rem;
     align-items: center;
 }
@@ -164,6 +145,7 @@ nav a:hover {
     padding: 0.5rem;
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.08);
+    min-width: 150px;
 }
 
 /* Hero section */
@@ -171,7 +153,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 480px;
     gap: 1rem;
-    align-items: center;
+    align-items: start;
     padding: 1.25rem 0;
 }
 
@@ -205,6 +187,7 @@ nav a:hover {
 .tags {
     margin-top: 1rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
@@ -219,6 +202,7 @@ nav a:hover {
 #map {
     height: 420px;
     border-radius: 8px;
+    width: 100%;
 }
 
 /* Features */
@@ -264,6 +248,7 @@ nav a:hover {
     border-radius: 8px;
     min-width: 220px;
     border: 1px solid rgba(10, 10, 10, 0.03);
+    flex: 1 1 220px;
 }
 
 /* Footer */
@@ -308,12 +293,48 @@ footer {
     }
 }
 
+@media (max-width: 720px) {
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-tools {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+    }
+
+    .hero-content h3 {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 520px) {
     .title h1 {
         font-size: 1rem;
     }
 
-    nav ul {
-        overflow-x: auto;
+    .title h2 {
+        font-size: 0.75rem;
+    }
+
+    nav a {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    #map {
+        height: 260px;
+    }
+
+    .cta {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .downloads {
+        flex-direction: column;
     }
 }
