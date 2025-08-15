@@ -39,21 +39,27 @@
   </div>
 
   <nav aria-label="Primary navigation">
-    <div class="container nav-container">
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#schemes">Services</a></li>
-        <li><a href="#downloads">Downloads</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-      <div class="nav-tools">
-        <input id="search" placeholder="Search villages, schemes..." aria-label="Search"/>
-        <a class="btn" href="#map">Open Map</a>
-      </div>
+  <div class="container nav-container">
+    <!-- Hamburger Menu Button -->
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#schemes">Services</a></li>
+      <li><a href="#downloads">Downloads</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+    <div class="nav-tools">
+      <input id="search" placeholder="Search villages, schemes..." aria-label="Search"/>
+      <a class="btn" href="#map">Open Map</a>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <main class="container">
     <!-- Hero + Map -->
@@ -155,5 +161,11 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="script.js"></script>
+  <script>
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
