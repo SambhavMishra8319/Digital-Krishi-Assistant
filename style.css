@@ -364,3 +364,14 @@ footer {
     display: flex;
   }
 }
+.right-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
