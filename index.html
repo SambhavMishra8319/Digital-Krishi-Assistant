@@ -1,22 +1,27 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+
   <title>Digital Krishi Assistant</title>
   <link rel="icon" href="Logo2.ico">
-  <meta name="description" content="Digital Krishi Assistant — geospatial platform for geo-fencing, geo-tagging and land-based scheme monitoring (advanced clone).">
+  <meta name="description"
+    content="Digital Krishi Assistant — geospatial platform for geo-fencing, geo-tagging and land-based scheme monitoring (advanced clone).">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap"
+    rel="stylesheet">
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="top-strip">किसानों को बल, देश को उज्ज्वल भविष्य | Empowering Farmers, Enriching Nation</div>
 
@@ -39,60 +44,68 @@
   </div>
 
   <nav aria-label="Primary navigation">
-  <div class="container nav-container">
-    <!-- Hamburger Menu Button -->
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      &#9776;
-    </button>
+    <div class="container nav-container">
+      <!-- Hamburger Menu Button -->
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
 
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#schemes">Services</a></li>
-      <li><a href="#downloads">Downloads</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-      <li><a href="#">Support</a></li>
-    </ul>
-    <div class="nav-tools">
-      <input id="search" placeholder="Search crop suggestions" aria-label="Search"/>
-      <a class="btn" href="#map">Open Map</a>
-      
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#schemes">Services</a></li>
+        <li><a href="#downloads">Downloads</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+      <div class="nav-tools">
+        <input id="search" placeholder="Search crop suggestions" aria-label="Search" />
+        <a class="btn" href="#map">Open Map</a>
+
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 
   <main class="container">
     <!-- Hero + Map -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-content">
-        <h3 id="hero-heading">Empowering Farmers with AI & ML — Get crop suggestions, pest control tips, weather updates & market prices in real time.</h3>
-        <p class="muted">Our Digital Krishi Assistant uses the power of Artificial Intelligence and Machine Learning to bring smart, data-driven solutions directly to the fields. From personalized crop recommendations and early pest detection to accurate weather forecasts and up-to-date market prices, farmers get the right information at the right time. This helps reduce risks, improve yields, and ensure better income — all through an easy-to-use platform designed for every farmer.</p>
-        <div class="cta">
+        <h3 id="hero-heading">Empowering Farmers with AI & ML — Get crop suggestions, pest control tips, weather updates
+          & market prices in real time.</h3>
+        <p class="muted">Our Digital Krishi Assistant uses the power of Artificial Intelligence and Machine Learning to
+          bring smart, data-driven solutions directly to the fields. From personalized crop recommendations and early
+          pest detection to accurate weather forecasts and up-to-date market prices, farmers get the right information
+          at the right time. This helps reduce risks, improve yields, and ensure better income — all through an
+          easy-to-use platform designed for every farmer.</p>
+        <!-- <div class="cta">
           <a class="btn" href="#map">View Live Map</a>
           <a class="btn secondary" href="#schemes">Explore Schemes</a>
-        </div>
-        <div class="tags">
+        </div> -->
+        <!-- <div class="tags">
           <div class="pill">Geo-fence</div>
           <div class="pill">Geo-tag</div>
           <div class="pill">Audit Trails</div>
-        </div>
+        </div> -->
+        <div <a href="#services" class="btn">Get Started</a>
+          ></div>
       </div>
       <aside class="right-stack">
-    <div class="hero-visual">
-      <img src="former with robot.png" alt="Farmer talking to AI assistant in the field" loading="lazy">
-    </div>
-    <!-- <div class="map-card" aria-label="Interactive map card">
+        <div class="hero-visual">
+          <img src="former with robot.png" alt="Farmer talking to AI assistant in the field" loading="lazy">
+        </div>
+        <!-- <div class="map-card" aria-label="Interactive map card">
       <div id="map" role="application" aria-live="polite"></div>
     </div> -->
-  </aside>
+      </aside>
     </section>
 
     <!-- Features -->
     <section class="features" aria-label="Platform features">
       <article class="feature">
         <h4>Geo-fencing & Plot Management</h4>
-        <p>Digitally draw and store plot boundaries, calculate area and cadastral references. Export KML/GeoJSON for sharing.</p>
+        <p>Digitally draw and store plot boundaries, calculate area and cadastral references. Export KML/GeoJSON for
+          sharing.</p>
       </article>
       <article class="feature">
         <h4>Beneficiary Tagging</h4>
@@ -111,7 +124,9 @@
     <!-- About -->
     <section id="about" class="about">
       <h3>About Digital Krishi Assistant</h3>
-      <p>Digital Krishi Assistant is a geospatial application for geo-fencing of agricultural land, geo-tagging of land area and collection of baseline scheme data to ensure the right benefits reach the right beneficiaries. It helps administrators, extension officers and farmers with evidence-based decision making.</p>
+      <p>Digital Krishi Assistant is a geospatial application for geo-fencing of agricultural land, geo-tagging of land
+        area and collection of baseline scheme data to ensure the right benefits reach the right beneficiaries. It helps
+        administrators, extension officers and farmers with evidence-based decision making.</p>
     </section>
 
     <!-- Schemes / Downloads -->
@@ -139,7 +154,9 @@
     <!-- Contact -->
     <section id="contact" class="contact">
       <h3>Contact & Support</h3>
-      <p class="muted">For technical support, feature requests, or data corrections, contact the Directorate at <a href="mailto:support@Digital Krishi Assistant.gov.in">support@Digital Krishi Assistant</a> or call +91-8319802425.</p>
+      <p class="muted">For technical support, feature requests, or data corrections, contact the Directorate at <a
+          href="mailto:support@Digital Krishi Assistant.gov.in">support@Digital Krishi Assistant</a> or call
+        +91-8319802425.</p>
     </section>
   </main>
 
@@ -168,10 +185,11 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="script.js"></script>
   <script>
-  document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('.nav-links').classList.toggle('show');
-  });
-</script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('show');
+    });
+  </script>
 
 </body>
+
 </html>
