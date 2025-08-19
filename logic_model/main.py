@@ -1,5 +1,7 @@
 from Model.train_model import train_model
-from Model.predict import predict_crop_with_weather
+from Model.weather_fetch import get_weather
+from Model.predict import predict_crop
+from Model.soil_predict import get_soil_values_by_city
 
 if __name__ == "__main__":
     # Step 1: Train the model
@@ -7,16 +9,16 @@ if __name__ == "__main__":
 
     # Give input to the model
     try:
-        N = float(input("Enter Nitrogen value (N): "))
-        P = float(input("Enter Phosphorus value (P): "))
-        K = float(input("Enter Potassium value (K): "))
-        ph = float(input("Enter soil pH: "))
         city = input("Enter your city name: ")
 
-        # Step 3: Predict crop
-        recommended_crop = predict_crop_with_weather(N, P, K, ph, city)
+        #Predict Soil data and weather
+        N, P, K, ph = get_soil_values_by_city(city)
+        temp, humidity, rain = get_weather(city)
 
-        print(f"\n✅ Recommended Crop for {city}: {recommended_crop}")
+        # Step 3: Predict crop
+        recommended_crop = predict_crop(N, P, K, temp, humidity, ph, rain, city)
+
+        print(f"\n Recommended Crop for {city}: {recommended_crop}")
 
     except ValueError:
-        print("❌ Please enter valid numeric values for N, P, K, and pH.")
+        print(" There is a error in predicting the crop or predicting the soil information!!!")

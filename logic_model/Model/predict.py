@@ -1,13 +1,15 @@
 import joblib
-from Model.weather_fetch import get_weather  # correct import
+import sys
+import os
 
-def predict_crop_with_weather(N, P, K, ph, city_name):
+print(sys.executable)
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+def predict_crop(N, P, K, ph, temp, humidity, rain, city_name):
     # Load the trained model and label encoder
     model = joblib.load("Model/crop_model.pkl")
     le = joblib.load("Model/label_encoder.pkl")
-
-    # Get live weather data
-    temp, humidity, rain = get_weather(city_name)
 
     # Prepare feature list in correct order
     features = [N, P, K, temp, humidity, ph, rain]
@@ -18,4 +20,4 @@ def predict_crop_with_weather(N, P, K, ph, city_name):
     return crop_name
 
 if __name__ == "__main__":
-    print("Recommended Crop:", predict_crop_with_weather(90, 42, 43, 6.5, "Pune"))
+    print("Recommended Crop:", predict_crop(25, 56,84, 45, 82, 6.5, 225, "Pune"))

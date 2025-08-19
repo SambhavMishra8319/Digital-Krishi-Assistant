@@ -1,5 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+import sys
+print(sys.executable)
 
 def load_data(path="Dataset/Crop_recommendation.csv"):
     data = pd.read_csv(path)

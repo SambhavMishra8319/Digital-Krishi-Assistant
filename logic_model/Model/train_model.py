@@ -1,5 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
+import matplotlib.pyplot as plt # type: ignore
 from sklearn.metrics import accuracy_score, classification_report
 import joblib
 from Model.dataset_load import load_data  # <-- make sure dataset_load.py exists
@@ -21,6 +22,18 @@ def train_model():
     y_pred = model.predict(X_test)
     print("Accuracy:", accuracy_score(y_test, y_pred))
     print(classification_report(y_test, y_pred, target_names=le.classes_))
+
+    # After model.fit(X_train, y_train)
+
+    importances = model.feature_importances_
+    features = X.columns
+
+    # Plot feature importances
+    plt.barh(features, importances)
+    plt.xlabel("Feature Importance")
+    plt.title("Feature Importance in Crop Prediction Model")
+    plt.show()
+
 
     # Save model & label encoder
     joblib.dump(model, "Model/crop_model.pkl")
